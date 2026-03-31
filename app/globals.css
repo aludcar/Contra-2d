@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #274c77 0%, #0d1b2a 65%);
+  color: #f1faee;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.gameShell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1rem 2rem;
+}
+
+.gameCanvas {
+  border: 4px solid #f1faee;
+  box-shadow: 0 0 0 4px #1d3557;
+  background: #000;
+}
+
+.hud {
+  width: min(100vw, 1200px);
+  background: rgba(0, 0, 0, 0.55);
+  border: 2px solid #f1faee;
+  padding: 0.45rem 0.75rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.bossWrap {
+  margin-top: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bossBar {
+  height: 12px;
+  width: 280px;
+  border: 1px solid #ddd;
+  background: #333;
+}
+
+.bossFill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff6d00, #ffbe0b);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  pointer-events: none;
+  text-align: center;
+  text-shadow: 2px 2px #000;
+}
+
+.overlay h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.4rem, 3.8vw, 2.4rem);
+}
+
+.overlay p {
+  margin: 0.2rem 0;
+}
+
+.controls {
+  width: min(100vw, 1200px);
+  text-align: center;
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
